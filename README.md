@@ -21,4 +21,4 @@
 ### Additional Notes:
 1. If API is not available, a message along with a status code will display in the console and your terminal. In the meantime, the page will show 0 tickes available to show.
 2. Client-side errors are handled simply through displaying the error on the page.
-3. Tests have not yet been implemented in this project.
+3. Unit Tests have not yet been implemented in this project.
