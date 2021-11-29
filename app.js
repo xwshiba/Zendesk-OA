@@ -31,7 +31,8 @@ const Basic = 'Basic ' + hash;
 
 
 // Urls
-const url = 'https://zccticketschallenge.zendesk.com/api/v2/tickets';
+const subdomain = 'zccticketschallenge'; // please change the subdomain if needed
+const url = `https://${subdomain}.zendesk.com/api/v2/tickets`;
 const countUrl = url + '/count';
 // const pageCount = 25;
 // const pageUrl = url + `?page[size]=${pageCount}`;
