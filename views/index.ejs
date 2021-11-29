@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickets</title>
+    <link href="/style.css" rel="stylesheet" type="text/css">
+    <script src="app.js"></script>
+
+
+
+
+</head>
+
+<body>
+    <div class='container'>
+        <div class='header'>
+            <h1>Mobile Ticket Viewer</h1>
+            <p><%=totalTicketsCount%> total tickets, <%=currTickets.length%> on this page</p>
+            <div>
+                <% if ((page - 1) > 0) {%>
+                <a href="/tickets/<%=page-1%>">Prev</a>
+                <% }%>
+
+                <% if ((page + 1) <= totalPages) {%>
+                <a href="/tickets/<%=page+1%>">Next</a>
+                <% }%>
+            </div>
+        </div>
+
+        <ul>
+            <% for (let t of currTickets) {%>
+            <li>
+                <a href="/tickets/ticketsdetails/<%= t.id %>">
+                    <%=t.id%> - <%=t.status[0].toUpperCase()%> - <b><%=t.subject%></b>
+                </a>
+            </li>
+            <% }%>
+        </ul>
+        <div class='footer'>
+            <% if ((page - 1) > 0) {%>
+            <a href="/tickets/<%=page-1%>">Prev</a>
+            <% }%>
+
+            <% if ((page + 1) <= totalPages) {%>
+            <a href="/tickets/<%=page+1%>">Next</a>
+            <% }%>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
